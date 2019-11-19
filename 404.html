@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OSM</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script src="https://kit.fontawesome.com/c2b250faf6.js" crossorigin="anonymous"></script>
+  
+  <script>
+
+      function playClick(){
+        window.angularComponentReference.zone.run(function()
+            {window.angularComponentReference.playFn();});
+      }
+      function pauseClick(){
+        window.angularComponentReference.zone.run(function()
+            {window.angularComponentReference.pauseFn();});
+      }
+      function nextClick(){
+        window.angularComponentReference.zone.run(function()
+            {window.angularComponentReference.nextFn();});
+      }
+      function prevClick(){
+        window.angularComponentReference.zone.run(function()
+            {window.angularComponentReference.prevFn();});
+      }
+      function getTitle(){
+        return window.angularComponentReference.zone.run(function()
+            {
+              return window.angularComponentReference.titleFn();
+            });
+      }
+      function showPL(){
+        return window.angularComponentReference.zone.run(function()
+            {
+              return window.angularComponentReference.showPLFn();
+            });
+      }
+      function showLarge(){
+        return window.angularComponentReference.zone.run(function()
+            {
+              return window.angularComponentReference.showLargePlayer();
+            });
+      }
+
+  </script>
+
+
+</head>
+<body class="appBody">
+  <app-root></app-root>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+</html>

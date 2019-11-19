@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve" width="512px" height="512px" class="hovered-paths"><g><g>
+	<path style="fill:#35495E" d="M186.062,341.575V153.425l61.438,35.486V0C110.81,0,0,110.81,0,247.5S110.81,495,247.5,495V306.089   L186.062,341.575z" data-original="#6D2C93" class="hovered-path active-path" data-old_color="#6D2C93"/>
+	<path style="fill:#273544" d="M247.5,0v188.911L348.938,247.5L247.5,306.089V495C384.19,495,495,384.19,495,247.5   S384.19,0,247.5,0z" data-original="#3D1952" class="" data-old_color="#3D1952"/>
+	<polygon style="fill:#FF5364" points="186.062,247.5 186.062,341.575 247.5,306.089 348.938,247.5  " data-original="#9CDD05" class="" data-old_color="#9CDD05"/>
+	<polygon style="fill:#DF4D60" points="186.062,247.5 348.938,247.5 247.5,188.911 186.062,153.425  " data-original="#B2FA09" class="" data-old_color="#B2FA09"/>
+</g></g> </svg>
