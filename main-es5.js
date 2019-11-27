@@ -1271,9 +1271,13 @@
                     dialogRef.afterClosed().subscribe(function (results) {
                         //console.log('The dialog was closed');
                         if (results && results.length > 0) {
-                            for (var _i = 0, results_1 = results; _i < results_1.length; _i++) {
-                                var result = results_1[_i];
-                                _this.addValue(result.id, result.title, result.thumbnailUrl);
+                            var _loop_1 = function (index) {
+                                setTimeout(function () {
+                                    _this.addValue(results[index].id, results[index].title, results[index].thumbnailUrl);
+                                }, (+index * 1000));
+                            };
+                            for (var index in results) {
+                                _loop_1(index);
                             }
                         }
                     });

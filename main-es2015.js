@@ -1327,8 +1327,10 @@ let MusicAddComponent = class MusicAddComponent {
         dialogRef.afterClosed().subscribe((results) => {
             //console.log('The dialog was closed');
             if (results && results.length > 0) {
-                for (let result of results) {
-                    this.addValue(result.id, result.title, result.thumbnailUrl);
+                for (let index in results) {
+                    setTimeout(() => {
+                        this.addValue(results[index].id, results[index].title, results[index].thumbnailUrl);
+                    }, (+index * 1000));
                 }
             }
         });
