@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n<div [ngStyle]=\"headerBarStyle\">\n    <app-header [username]=\"loggedInUser\"></app-header>\n</div>\n<div class=\"setBackground\" [ngStyle]=\"musicPlayerStyle\">\n    <div [ngStyle]=\"leftStyle\">\n        <div [ngStyle]=\"largePlayer?largePlayerStyle:playerStyle\">\n            <app-player \n                [queExpanded]=\"expanded\" \n                [playerQueue]=\"playerQueue\" \n                [currentIndex]=\"currentIndex\" \n                (onIndexChange)=\"onIndexChange($event)\" \n                [largePlayer]=\"largePlayer\"\n                (onLargePlayerChange)=\"onLargePlayerChange($event)\"></app-player>\n        </div>\n        <div [hidden]=\"lastScreenSz.isMobile || largePlayer\" [ngStyle]=\"adderStyle\">\n            <app-music-add\n            [mode]=\"'web'\"\n            [playlists]=\"playlists\"\n            [selectedPlaylist]=\"selectedPlaylist\"\n            (onAdd)=\"addVideo($event)\"></app-music-add>\n        </div>\n    </div>\n    <div [hidden]=\"largePlayer\" [ngStyle]=\"rightStyle\">\n        <app-queue \n            (onAdd)=\"addVideo($event)\"\n            [playerQueue]=\"playerQueue\"\n            [playlists]=\"playlists\"\n            [selectedPlaylist]=\"selectedPlaylist\"\n            [addable]=\"addable\"\n            [expanded]=\"expanded\"\n            [defaultPlaylist]=\"defaultPlaylist\"\n            (onAddPlaylist)=\"onAddPlaylist($event)\"\n            (onModifyPlaylist)=\"onModifyPlaylist($event)\"\n            (onDeletePlaylist)=\"onDeletePlaylist($event)\"\n            (onChangePlaylist)=\"onChangePlaylist($event)\"\n            (onExpCollapse)=\"onExpCollapse($event)\"\n            (onEditTitle)=\"onEditTitle($event)\" [currentIndex]=\"currentIndex\" (onIndexChange)=\"onIndexChange($event)\" (onDoubleClic)=\"playSong($event)\"></app-queue>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<div [ngStyle]=\"headerBarStyle\">\n    <app-header [username]=\"loggedInUser\"></app-header>\n</div>\n<div class=\"setBackground\" [ngStyle]=\"musicPlayerStyle\">\n    <div [ngStyle]=\"leftStyle\">\n        <div [ngStyle]=\"largePlayer?largePlayerStyle:playerStyle\">\n            <app-player \n                [queExpanded]=\"expanded\" \n                [playerQueue]=\"playerQueue\" \n                [currentIndex]=\"currentIndex\" \n                (onIndexChange)=\"onIndexChange($event)\" \n                [largePlayer]=\"largePlayer\"\n                (onLargePlayerChange)=\"onLargePlayerChange($event)\"></app-player>\n        </div>\n        <div [hidden]=\"lastScreenSz.isMobile || largePlayer\" [ngStyle]=\"adderStyle\">\n            <app-music-add\n            [mode]=\"'web'\"\n            [playlists]=\"playlists\"\n            [selectedPlaylist]=\"selectedPlaylist\"\n            (onAdd)=\"addVideo($event)\"></app-music-add>\n        </div>\n    </div>\n    <div [hidden]=\"largePlayer\" [ngStyle]=\"rightStyle\">\n        <app-queue \n            (onAdd)=\"addVideo($event)\"\n            [playerQueue]=\"playerQueue\"\n            [playlists]=\"playlists\"\n            [selectedPlaylist]=\"selectedPlaylist\"\n            [addable]=\"addable\"\n            [expanded]=\"expanded\"\n            [defaultPlaylist]=\"defaultPlaylist\"\n            (onAddPlaylist)=\"onAddPlaylist($event)\"\n            (onModifyPlaylist)=\"onModifyPlaylist($event)\"\n            (onDeletePlaylist)=\"onDeletePlaylist($event)\"\n            (onChangePlaylist)=\"onChangePlaylist($event)\"\n            (onExpCollapse)=\"onExpCollapse($event)\"\n            (onEditTitle)=\"onEditTitle($event)\"\n            (onChangePos)=\"onChangePos($event)\" [currentIndex]=\"currentIndex\" (onIndexChange)=\"onIndexChange($event)\" (onDoubleClic)=\"playSong($event)\"></app-queue>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("   \n    <div class=\"queue\" >\n        \n        \n        \n        <div cdkDropList class=\"box example-list\" (cdkDropListDropped)=\"drop($event)\">\n                <div *ngIf=\"showExpand\" [ngClass]=\"{'sendBack':hideSearch}\" class=\"adderPart\">\n                        <app-music-add\n                        (onSearch)=\"hideSear($event)\"\n                        [mode]=\"'mobile'\"\n                        [playlists]=\"playlists\"\n                        [selectedPlaylist]=\"selectedPlaylist\"\n                        (onAdd)=\"addVideo($event)\"></app-music-add>\n                </div>\n                <div class=\"queueHeader\">\n                         <div class=\"dropbox\">\n                               <div role=\"button\" (click)=\"isClosed=!isClosed\" class=\"content\">\n                                    <mat-icon class=\"iconn\" svgIcon=\"pllist\" aria-hidden=\"false\" ></mat-icon>\n                                    <div class=\"playlistName\">\n                                        {{playlists[selectedPlaylist].playlist}}\n                                    </div>\n                                    <div class=\"arrow\">\n                                        <mat-icon class=\"icons\" [svgIcon]=\"isClosed?'down':'up'\" aria-hidden=\"false\" ></mat-icon>\n                                    </div>\n                               </div>\n                               <div [hidden]=\"!addable\" class=\"addPL\">\n                                <mat-icon (click)=\"addPL()\" class=\"icons\" [ngClass]=\"{'expand':!showExpand}\" svgIcon=\"addblack\" aria-hidden=\"false\" ></mat-icon>\n                               </div>\n                               <div [hidden]=\"isClosed\" class=\"optionList\">\n                                   <div class=\"listItems\" [ngClass]=\"{'selected':selectedPlaylist==in}\" *ngFor=\"let playlist of playlists;let in=index\">\n\n                                       <div (click)=\"selectPL(in)\" class=\"listItem\">\n                                           {{playlist.playlist}}\n                                       </div>\n                                       <div [hidden]=\"in==0\" class=\"border\"></div>\n                                       <div [hidden]=\"in==0\" class=\"optionIcon\">\n                                            <mat-icon (click)=\"editPL(in)\" class=\"icons\" svgIcon=\"edit\" aria-hidden=\"false\" ></mat-icon>\n                                            <mat-icon (click)=\"deletePL(in)\" class=\"icons\" svgIcon=\"delete\" aria-hidden=\"false\" ></mat-icon>\n                                       </div> \n                                       \n                                    </div>\n\n                               </div>\n                            </div>\n                            \n                   \n                        \n                    \n                    </div>\n\n                    <div *ngIf=\"isGuestQueue\" class=\"example-box loginDisclaimer\" role=\"button\">\n                            <div class=\"songTitle\">\n                                    Please <a href=\"/login\">Login</a>  to save your added items.\n                            </div>\n                    </div>\n                <div class=\"songList\" [ngClass]=\"{'smaller':isGuestQueue}\" #divToScroll>\n                    \n                    <div class=\"example-box\" role=\"button\"  *ngFor=\"let song of playerQueue;let in = index\" (click)=\"playSong(in)\" [ngClass]=\"{'current':in==currentIndex}\" cdkDrag>\n                        <div [hidden]=\"in==currentIndex\" class=\"handler\">\n                            <mat-icon role=\"button\" class=\"icons\" svgIcon=\"drag\" aria-hidden=\"false\" cdkDragHandle></mat-icon>\n                        </div>\n                        <div class=\"thumbNail\">\n                            <img [src]=\"song.thumbnail\">\n                        </div>\n                        <div class=\"songTitle\">\n                                {{song.title | titlecase}}\n                        </div>\n                        <div [hidden]=\"in==currentIndex\" class=\"closer\">\n                                <mat-icon role=\"button\" (click)=\"remSong(in)\" class=\"icons\" svgIcon=\"cross\" aria-hidden=\"false\" ></mat-icon>\n                        </div>\n                        <div class=\"closer editIcon\">\n                                <mat-icon role=\"button\" (click)=\"editTitle(in)\" class=\"icons\" svgIcon=\"editttl\" aria-hidden=\"false\" ></mat-icon>\n                        </div>\n                       \n                \n                    </div>\n                </div>    \n                \n        </div>\n    </div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("   \n    <div class=\"queue\" >\n        \n        \n        \n        <div class=\"box example-list\">\n                <div *ngIf=\"showExpand\" [ngClass]=\"{'sendBack':hideSearch}\" class=\"adderPart\">\n                        <app-music-add\n                        (onSearch)=\"hideSear($event)\"\n                        [mode]=\"'mobile'\"\n                        [playlists]=\"playlists\"\n                        [selectedPlaylist]=\"selectedPlaylist\"\n                        (onAdd)=\"addVideo($event)\"></app-music-add>\n                </div>\n                <div class=\"queueHeader\">\n                         <div class=\"dropbox\">\n                               <div role=\"button\" (click)=\"isClosed=!isClosed\" class=\"content\">\n                                    <mat-icon class=\"iconn\" svgIcon=\"pllist\" aria-hidden=\"false\" ></mat-icon>\n                                    <div class=\"playlistName\">\n                                        {{playlists[selectedPlaylist].playlist}}\n                                    </div>\n                                    <div class=\"arrow\">\n                                        <mat-icon class=\"icons\" [svgIcon]=\"isClosed?'down':'up'\" aria-hidden=\"false\" ></mat-icon>\n                                    </div>\n                               </div>\n                               <div [hidden]=\"!addable\" class=\"addPL\">\n                                <mat-icon (click)=\"addPL()\" class=\"icons\" [ngClass]=\"{'expand':!showExpand}\" svgIcon=\"addblack\" aria-hidden=\"false\" ></mat-icon>\n                               </div>\n                               <div [hidden]=\"isClosed\" class=\"optionList\">\n                                   <div class=\"listItems\" [ngClass]=\"{'selected':selectedPlaylist==in}\" *ngFor=\"let playlist of playlists;let in=index\">\n\n                                       <div (click)=\"selectPL(in)\" class=\"listItem\">\n                                           {{playlist.playlist}}\n                                       </div>\n                                       <div [hidden]=\"in==0\" class=\"border\"></div>\n                                       <div [hidden]=\"in==0\" class=\"optionIcon\">\n                                            <mat-icon (click)=\"editPL(in)\" class=\"icons\" svgIcon=\"edit\" aria-hidden=\"false\" ></mat-icon>\n                                            <mat-icon (click)=\"deletePL(in)\" class=\"icons\" svgIcon=\"delete\" aria-hidden=\"false\" ></mat-icon>\n                                       </div> \n                                       \n                                    </div>\n\n                               </div>\n                            </div>\n                            \n                   \n                        \n                    \n                    </div>\n\n                    <div *ngIf=\"isGuestQueue\" class=\"example-box loginDisclaimer\" role=\"button\">\n                            <div class=\"songTitle\">\n                                    Please <a href=\"/login\">Login</a>  to save your added items.\n                            </div>\n                    </div>\n                <div class=\"songList\" [ngClass]=\"{'smaller':isGuestQueue}\" #divToScroll cdkDropList  (cdkDropListDropped)=\"drop($event)\">\n                    \n                    <div class=\"example-box\" role=\"button\"  *ngFor=\"let song of playerQueue;let in = index\" (click)=\"playSong(in)\" [ngClass]=\"{'current':in==currentIndex}\" cdkDrag>\n                        <div [hidden]=\"in==currentIndex\" class=\"handler\">\n                            <mat-icon role=\"button\" class=\"icons\" svgIcon=\"drag\" aria-hidden=\"false\" cdkDragHandle></mat-icon>\n                        </div>\n                        <div class=\"thumbNail\">\n                            <img [src]=\"song.thumbnail\">\n                        </div>\n                        <div class=\"songTitle\">\n                                {{song.title | titlecase}}\n                        </div>\n                        <div [hidden]=\"in==currentIndex\" class=\"closer\">\n                                <mat-icon role=\"button\" (click)=\"remSong(in)\" class=\"icons\" svgIcon=\"cross\" aria-hidden=\"false\" ></mat-icon>\n                        </div>\n                        <div class=\"closer editIcon\">\n                                <mat-icon role=\"button\" (click)=\"editTitle(in)\" class=\"icons\" svgIcon=\"editttl\" aria-hidden=\"false\" ></mat-icon>\n                        </div>\n                       \n                \n                    </div>\n                </div>    \n                \n        </div>\n    </div>\n\n");
 
 /***/ }),
 
@@ -1349,10 +1349,13 @@ let MusicAddComponent = class MusicAddComponent {
                 this.musicDataFetcher.saveSong(videoElem).subscribe((data) => {
                     console.log(data);
                     videoElem.id = data;
+                    this.onAdd.emit(videoElem);
                 });
             }
         }
-        this.onAdd.emit(videoElem);
+        else {
+            this.onAdd.emit(videoElem);
+        }
     }
     onURLChange() {
         this.invalidURL = false;
@@ -1694,6 +1697,29 @@ let MusicPlayerComponent = class MusicPlayerComponent {
         this.adderStyle = this.styleSetter.adderStyleSetter(scrSz);
     }
     addVideo(video) {
+        if (localStorage.getItem('loggedIn') && localStorage.getItem('loggedIn') == 'true') {
+            let user = localStorage.getItem('username') ? localStorage.getItem('username') : 'Guest';
+            if (user != 'Guest') {
+                let index = this.playerQueue.length;
+                let id = video.id;
+                let prev = index == 0 ? 'first' : this.playerQueue[index - 1].lexoRank;
+                let next = 'last';
+                this.musicDataFetcher.setLexoRank(id, prev, next).subscribe((data) => {
+                    if (data == '-1') {
+                        return;
+                    }
+                    else {
+                        let valArr = data.split('@');
+                        video.lexoRank = valArr[0];
+                        if (valArr.length > 1 && valArr[1] == 'rebalance') {
+                            this.musicDataFetcher.rebalancePL(video.username, video.playlist).subscribe(data => {
+                                console.log("Rebalanced");
+                            });
+                        }
+                    }
+                });
+            }
+        }
         this.playerQueue.push(video);
     }
     onEditTitle(item) {
@@ -1708,6 +1734,30 @@ let MusicPlayerComponent = class MusicPlayerComponent {
     }
     playSong(index) {
         this.playrComp.playIndexNumber(index);
+    }
+    onChangePos(index) {
+        if (localStorage.getItem('loggedIn') && localStorage.getItem('loggedIn') == 'true') {
+            let user = localStorage.getItem('username') ? localStorage.getItem('username') : 'Guest';
+            if (user != 'Guest') {
+                let id = this.playerQueue[index].id;
+                let prev = index == 0 ? 'first' : this.playerQueue[index - 1].lexoRank;
+                let next = index == this.playerQueue.length - 1 ? 'last' : this.playerQueue[index + 1].lexoRank;
+                this.musicDataFetcher.setLexoRank(id, prev, next).subscribe((data) => {
+                    if (data == '-1') {
+                        return;
+                    }
+                    else {
+                        let valArr = data.split('@');
+                        this.playerQueue[index].lexoRank = valArr[0];
+                        if (valArr.length > 1 && valArr[1] == 'rebalance') {
+                            this.musicDataFetcher.rebalancePL(this.playerQueue[index].username, this.playerQueue[index].playlist).subscribe(data => {
+                                console.log("Rebalanced");
+                            });
+                        }
+                    }
+                });
+            }
+        }
     }
 };
 MusicPlayerComponent.ctorParameters = () => [
@@ -2294,6 +2344,7 @@ let QueueComponent = class QueueComponent {
         this.onChangePlaylist = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.onAdd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.onEditTitle = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.onChangePos = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.isRemSong = false;
         this.isEditSong = false;
         this.isGuestQueue = false;
@@ -2394,6 +2445,7 @@ let QueueComponent = class QueueComponent {
         if (event.previousIndex == this.currentIndex) {
             return;
         }
+        Object(_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__["moveItemInArray"])(this.playerQueue, event.previousIndex, event.currentIndex);
         if (event.previousIndex > this.currentIndex && event.currentIndex <= this.currentIndex) {
             this.currentIndex++;
             this.OnIndChanges();
@@ -2402,7 +2454,7 @@ let QueueComponent = class QueueComponent {
             this.currentIndex--;
             this.OnIndChanges();
         }
-        Object(_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__["moveItemInArray"])(this.playerQueue, event.previousIndex, event.currentIndex);
+        this.onChangePos.emit(event.currentIndex);
     }
     remSong(index) {
         this.isRemSong = true;
@@ -2516,6 +2568,9 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
 ], QueueComponent.prototype, "onEditTitle", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], QueueComponent.prototype, "onChangePos", void 0);
 QueueComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-queue',
@@ -2808,6 +2863,14 @@ let MusicDataFetcher = class MusicDataFetcher {
     deleteSong(item) {
         let uri = "music/deleteItem";
         return this.dataFetcher.post(uri, item);
+    }
+    setLexoRank(id, prev, next) {
+        let uri = "lexo/setLexorank";
+        return this.dataFetcher.post(uri, { id: id, prev: prev, next: next });
+    }
+    rebalancePL(usernm, playlist) {
+        let uri = "lexo/rebalance/" + usernm + "/" + playlist;
+        return this.dataFetcher.get(uri);
     }
 };
 MusicDataFetcher.ctorParameters = () => [
