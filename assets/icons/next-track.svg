@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve" width="512px" height="512px" class="hovered-paths"><g><g>
+	<path style="fill:#35495E" d="M199.64,341.58v-47.04l-81.44,47.04V153.42l81.44,47.04v-47.04l47.86,27.644V0   C110.81,0,0,110.81,0,247.5S110.81,495,247.5,495V313.936L199.64,341.58z" data-original="#6D2C93" class="" data-old_color="#6D2C93"/>
+	<path style="fill:#273544" d="M247.5,0v181.064l74.3,42.916V145h55v205h-55v-78.98l-74.3,42.916V495   C384.19,495,495,384.19,495,247.5S384.19,0,247.5,0z" data-original="#3D1952" class="hovered-path active-path" data-old_color="#3D1952"/>
+	<polygon style="fill:#DF4D60" points="118.2,247.5 118.2,341.58 199.64,294.54 199.64,341.58 247.5,313.936 321.8,271.02    321.8,350 376.8,350 376.8,247.5  " data-original="#9CDD05" class="" data-old_color="#9CDD05"/>
+	<polygon style="fill:#FF5364" points="199.64,200.46 118.2,153.42 118.2,247.5 376.8,247.5 376.8,145 321.8,145 321.8,223.98    247.5,181.064 199.64,153.42  " data-original="#B2FA09" class="" data-old_color="#B2FA09"/>
+</g></g> </svg>
