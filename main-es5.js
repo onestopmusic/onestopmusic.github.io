@@ -94,7 +94,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div mat-dialog-title>Title: \n        <mat-form-field color=\"accent\">\n                <input [disabled]=\"noOfTru!=1\" maxlength=\"30\" matInput [(ngModel)]=\"titleText\">\n        </mat-form-field>\n</div>\n<div mat-dialog-content>\n    <div *ngIf=\"showLoading\" class=\"loader\">\n        <div class=\"loadText\">\n                Loading....\n        </div>\n    </div>\n    <div *ngIf=\"isEmptySearch\" class=\"loader\">\n            <div class=\"loadText\">\n                    No rows to Show\n            </div>\n        </div>\n        <mat-radio-group>\n            <div class=\"example-box\" role=\"button\" *ngFor=\"let song of searchResults;let in = index\">\n                    <div class=\"thumbNail\">\n                        <img [src]=\"song.thumbnailUrl\">\n                    </div>\n                    <div class=\"songTitle\">\n                            <div class=\"title\"> {{song.title | titlecase}}</div>\n                                <div class=\"chanell\">\n                                       By {{song.channelTitle}}\n                                </div>\n                    </div>\n                    <div [hidden]=\"in==currentIndex\" class=\"closer\">\n                                <mat-checkbox class=\"example-margin\" (ngModelChange)=\"boolChange($event)\" [(ngModel)]=\"checkboxBool[in]\"></mat-checkbox>\n                    </div>\n            </div>\n             \n        </mat-radio-group>\n\n  \n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\n  <button mat-button [disabled]=\"noOfTru==0\" [mat-dialog-close]=\"sendData()\" cdkFocusInitial>Add to Queue</button>\n</div>\n\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div mat-dialog-title>Title: \n        <mat-form-field color=\"accent\">\n                <input [disabled]=\"noOfTru!=1\" maxlength=\"30\" matInput [(ngModel)]=\"titleText\">\n        </mat-form-field>\n</div>\n<div mat-dialog-content>\n    <div *ngIf=\"showLoading\" class=\"loader\">\n        <div class=\"loadText\">\n                Loading....\n        </div>\n    </div>\n    <div *ngIf=\"isEmptySearch\" class=\"loader\">\n            <div class=\"loadText\">\n                    No rows to Show\n            </div>\n        </div>\n        <mat-radio-group>\n            <div class=\"example-box\" role=\"button\" *ngFor=\"let song of searchResults;let in = index\">\n                    <div class=\"thumbNail\">\n                        <img [src]=\"song.thumbnailUrl\">\n                    </div>\n                    <div class=\"songTitle\">\n                            <div class=\"title\"> {{song.title | titlecase}}</div>\n                                <div class=\"chanell\">\n                                       By {{song.channelTitle}}\n                                </div>\n                    </div>\n                    <div class=\"closer\">\n                                <mat-checkbox class=\"example-margin\" (ngModelChange)=\"boolChange($event,in)\" [(ngModel)]=\"checkboxBool[in]\"></mat-checkbox>\n                    </div>\n            </div>\n             \n        </mat-radio-group>\n\n  \n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\n  <button mat-button [disabled]=\"noOfTru==0\" [mat-dialog-close]=\"sendData()\" cdkFocusInitial>Add to Queue</button>\n</div>\n\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/music-add/music-add.component.html": 
@@ -1137,12 +1137,18 @@
                 ModalCompComponent.prototype.onNoClick = function () {
                     this.dialogRef.close();
                 };
-                ModalCompComponent.prototype.boolChange = function (value) {
+                ModalCompComponent.prototype.boolChange = function (value, index) {
                     if (value) {
                         this.noOfTru++;
                     }
                     else {
                         this.noOfTru--;
+                    }
+                    if (this.noOfTru == 1) {
+                        for (var result in this.checkboxBool)
+                            if (this.checkboxBool[result] == true) {
+                                this.titleText = ('').concat(this.searchResults[result].title.split('|')[0].substring(0, 30));
+                            }
                     }
                 };
                 ModalCompComponent.prototype.sendData = function () {
@@ -1240,7 +1246,7 @@
                     this.screenState.screenSize.subscribe(function (scrSz) {
                         _this.screenSt = scrSz;
                     });
-                    this.txtQueryChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["tap"])(function (query) { return _this.beforeSuggestions(); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["debounceTime"])(500), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["switchMap"])(function (query) { return _this.musicDataFetcher.getYoutubeAutocomplete(query).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["catchError"])(function () { return _this.onError(); })); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["tap"])(function (data) { return _this.setSuggestions(data); })).subscribe();
+                    this.txtQueryChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["tap"])(function (query) { return _this.beforeSuggestions(); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["debounceTime"])(200), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["switchMap"])(function (query) { return _this.musicDataFetcher.getYoutubeAutocomplete(query).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["catchError"])(function () { return _this.onError(); })); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_10__["tap"])(function (data) { return _this.setSuggestions(data); })).subscribe();
                 };
                 MusicAddComponent.prototype.onSelectSuggestion = function (query) {
                     this.searchInp = query;
