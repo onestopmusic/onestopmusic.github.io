@@ -2926,7 +2926,7 @@
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
             /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-            var YOUTUBE_API_KEY = 'AIzaSyCtGPrWbCYLIz5UILx3dOcrUDEmjHZVQdA';
+            var YOUTUBE_API_KEY = 'AIzaSyAU6U9OdHxTCKprrmKGKNz1jOZnyxIbWSk';
             var YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search';
             var Result = /** @class */ (function () {
                 function Result(obj) {

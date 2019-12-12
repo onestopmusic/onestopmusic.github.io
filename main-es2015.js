@@ -3041,7 +3041,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const YOUTUBE_API_KEY = 'AIzaSyCtGPrWbCYLIz5UILx3dOcrUDEmjHZVQdA';
+const YOUTUBE_API_KEY = 'AIzaSyAU6U9OdHxTCKprrmKGKNz1jOZnyxIbWSk';
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search';
 class Result {
     constructor(obj) {

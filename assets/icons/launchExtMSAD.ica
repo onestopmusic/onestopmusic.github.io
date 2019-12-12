@@ -1,6 +1,6 @@
 [WFClient]
 AudioBandwidthLimit=0
-ClientName=WING_103.227.98.-RCA
+ClientName=WING_103.227.97.-RCA
 HotKey9Shift=(none)
 Hotkey10Char=(none)
 Hotkey10Shift=(none)
@@ -40,11 +40,11 @@ VirtualCOMPortEmulation=On
 GMC-Static $P8847=
 
 [GMC-Static $P8847]
-Address=;40;STA8CB34D8B8D4D;EFB0DCEF42EF4D3DA1B5BD37E2AAC558
+Address=;40;STA6EFD1FB0A3A4;1302F7BFEB785986C04F308211CD4AEF
 AutologonAllowed=ON
 BrowserProtocol=HTTPonTCP
 CGPSecurityTicket=On
-ClearPassword=699E052EAF88EC
+ClearPassword=6534F9C0DC74B1
 ClientAudio=On
 ClientHostedApps=0
 ConnectionBar=1
@@ -52,14 +52,14 @@ DesiredColor=8
 DesiredHRES=4294967295
 DesiredVRES=4294967295
 DoNotUseDefaultCSL=On
-Domain=\66FE594199B0BA83
+Domain=\230F88B21F4B9DFB
 FontSmoothingType=0
 HTTPBrowserAddress=!
 InitialProgram=#GMC-Static $P8847
-LaunchReference=4D795A4AF7E2A0D7773DF9B01C731C
+LaunchReference=244C58F465DFF5DE5792E5BD518929
 Launcher=WI
 LocHttpBrowserAddress=!
-LogonTicket=699E052EAF88EC66FE594199B0BA83
+LogonTicket=6534F9C0DC74B1230F88B21F4B9DFB
 LogonTicketType=CTXS1
 LongCommandLine=
 ProxyFavorIEConnectionSetting=Yes
