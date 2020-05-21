@@ -2298,7 +2298,7 @@ let PlayerComponent = class PlayerComponent {
         if (this.playerQueue.length == 0 || (this.currentIndex == 0 && this.repeatOn == 0)) {
             return;
         }
-        if (this.repeatOn == 2 || this.elapsedTime < 10) {
+        if (this.repeatOn == 2 || this.elapsedTime > 10) {
             this.onSLiderChange(0);
             return;
         }
