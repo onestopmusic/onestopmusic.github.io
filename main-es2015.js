@@ -23,6 +23,19 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Demo/demo.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Demo/demo.component.html ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"launcherBg\">\n        <div [ngStyle]=\"picStyle\" class=\"LogoContainer\">\n                <!-- <div [ngStyle]=\"abbrLogoStyle\" class=\"abbrLogo\">Demo</div> -->\n                <!-- <div class=\"fullLogo\">One.Stop.Music</div> -->\n\n                <img [hidden]=\"current!=in\" class=\"headerImg\" src=\"../../assets/icons/{{img}}\" alt=\"img\" *ngFor=\"let img of demoImages;let in = index\">\n                \n        </div>\n        <div [ngStyle]=\"bottomStyle\">\n                <div  class=\"dots\">\n                        <div role=\"button\" class=\"dot\" [ngClass]=\"{'act':current==in}\" *ngFor=\"let song of demoImages;let in = index\"></div>\n                        <!-- <div role=\"button\" class=\"dot\"></div>\n                        <div role=\"button\" class=\"dot\"></div>\n                        <div role=\"button\" class=\"dot\"></div>\n                        <div role=\"button\" class=\"dot\"></div> -->\n                        <button mat-stroked-button class=\"buttonNx\" (click)=\"buttonClicked()\" color=\"accent\">{{current != (demoImages.length-1)?'Next':'Go!'}}</button>\n    \n                </div>\n                <div role=\"button\" (click)=\"goToMusic()\" class=\"link\">Skip. Go to Player.</div>\n        </div>\n        \n        \n</div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -189,6 +202,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("   \n    <div class=\"queue\" >\n        \n        \n        \n        <div class=\"box example-list\">\n                <div *ngIf=\"showExpand\" [ngClass]=\"{'sendBack':hideSearch}\" class=\"adderPart\">\n                        <app-music-add\n                        (onSearch)=\"hideSear($event)\"\n                        [mode]=\"'mobile'\"\n                        [playlists]=\"playlists\"\n                        [selectedPlaylist]=\"selectedPlaylist\"\n                        (onAdd)=\"addVideo($event)\"></app-music-add>\n                </div>\n                <div class=\"queueHeader\">\n                         <div class=\"dropbox\">\n                               <div role=\"button\" (click)=\"isClosed=!isClosed\" class=\"content\">\n                                    <mat-icon class=\"iconn\" svgIcon=\"pllist\" aria-hidden=\"false\" ></mat-icon>\n                                    <div class=\"playlistName\">\n                                        {{playlists[selectedPlaylist].playlist}}\n                                    </div>\n                                    <div class=\"arrow\">\n                                        <mat-icon class=\"icons\" [svgIcon]=\"isClosed?'down':'up'\" aria-hidden=\"false\" ></mat-icon>\n                                    </div>\n                               </div>\n                               <div [hidden]=\"!addable\" class=\"addPL\">\n                                <mat-icon (click)=\"addPL()\" class=\"icons\" [ngClass]=\"{'expand':!showExpand}\" svgIcon=\"addblack\" aria-hidden=\"false\" ></mat-icon>\n                               </div>\n                               <div [hidden]=\"isClosed\" class=\"optionList\">\n                                   <div class=\"listItems\" [ngClass]=\"{'selected':selectedPlaylist==in}\" *ngFor=\"let playlist of playlists;let in=index\">\n\n                                       <div (click)=\"selectPL(in)\" class=\"listItem\">\n                                           {{playlist.playlist}}\n                                       </div>\n                                       <div [hidden]=\"in==0\" class=\"border\"></div>\n                                       <div [hidden]=\"in==0\" class=\"optionIcon\">\n                                            <mat-icon (click)=\"editPL(in)\" class=\"icons\" svgIcon=\"edit\" aria-hidden=\"false\" ></mat-icon>\n                                            <mat-icon (click)=\"deletePL(in)\" class=\"icons\" svgIcon=\"delete\" aria-hidden=\"false\" ></mat-icon>\n                                       </div> \n                                       \n                                    </div>\n\n                               </div>\n                            </div>\n                            \n                   \n                        \n                    \n                    </div>\n\n                    <div *ngIf=\"isGuestQueue\" class=\"example-box loginDisclaimer\" role=\"button\">\n                            <div class=\"songTitle\">\n                                    Please <a href=\"/login\">Login</a>  to save your added items.\n                            </div>\n                    </div>\n                <div class=\"songList\" [ngClass]=\"{'smaller':isGuestQueue}\" #divToScroll cdkDropList  (cdkDropListDropped)=\"drop($event)\">\n                    \n                    <div class=\"example-box\" role=\"button\"  *ngFor=\"let song of playerQueue;let in = index\" (click)=\"playSong(in)\" [ngClass]=\"{'current':in==currentIndex}\" cdkDrag>\n                        <div [hidden]=\"in==currentIndex\" class=\"handler\">\n                            <mat-icon role=\"button\" class=\"icons\" svgIcon=\"drag\" aria-hidden=\"false\" cdkDragHandle></mat-icon>\n                        </div>\n                        <div class=\"thumbNail\">\n                            <img [src]=\"song.thumbnail\">\n                        </div>\n                        <div class=\"songTitle\">\n                                {{song.title | titlecase}}\n                        </div>\n                        <div [hidden]=\"in==currentIndex\" class=\"closer\">\n                                <mat-icon role=\"button\" (click)=\"remSong(in)\" class=\"icons\" svgIcon=\"cross\" aria-hidden=\"false\" ></mat-icon>\n                        </div>\n                        <div class=\"closer editIcon\">\n                                <mat-icon role=\"button\" (click)=\"editTitle(in)\" class=\"icons\" svgIcon=\"editttl\" aria-hidden=\"false\" ></mat-icon>\n                        </div>\n                       \n                \n                    </div>\n                </div>    \n                \n        </div>\n    </div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/sign-up/demo-dialog.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sign-up/demo-dialog.html ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Hi There!</h1>\r\n<div mat-dialog-content>\r\n  <p>Do You want a demo??</p>\r\n</div>\r\n<div mat-dialog-actions style=\"display: flex;justify-content: flex-end;\">\r\n  <button mat-button mat-dialog-close=\"skip\">Skip</button>\r\n  <button mat-button mat-dialog-close=\"demo\" cdkFocusInitial>Demo</button>\r\n</div>");
 
 /***/ }),
 
@@ -434,6 +460,182 @@ function __importDefault(mod) {
 
 /***/ }),
 
+/***/ "./src/app/Demo/demo.component.scss":
+/*!******************************************!*\
+  !*** ./src/app/Demo/demo.component.scss ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".launcherBg {\n  height: 100%;\n  width: 100%;\n  background: linear-gradient(45deg, #032d4c, #3a6073);\n}\n\n.LogoContainer {\n  display: flex;\n  justify-content: center;\n}\n\n.link {\n  display: flex;\n  justify-content: center;\n  height: 20px;\n  font-size: 12px;\n  text-decoration: underline;\n  font-weight: lighter;\n  color: white;\n}\n\n.headerImg {\n  height: 95%;\n}\n\n.dot {\n  width: 1vh;\n  height: 1vh;\n  margin-top: 1.5vh;\n  margin-left: 0.5%;\n  border-radius: 1.5vh;\n  margin-right: 0.5%;\n  background: #64ffdb9f;\n  border: 2px solid black;\n}\n\n.dot.act {\n  background: rgba(1, 16, 20, 0.781);\n}\n\n.dots {\n  display: flex;\n  justify-content: center;\n  height: 50px;\n}\n\n.buttonNx {\n  position: absolute;\n  right: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRGVtby9EOlxcQW5ndWxhclxcT1NNL3NyY1xcYXBwXFxEZW1vXFxkZW1vLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9EZW1vL2RlbW8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDRSxZQUFBO0VBQ0EsV0FBQTtFQUNBLG9EQUFBO0FDQUY7O0FER0E7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7QUNBRjs7QURJQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsMEJBQUE7RUFDQSxvQkFBQTtFQUNBLFlBQUE7QUNERjs7QURJQTtFQUNFLFdBQUE7QUNERjs7QURJQTtFQUNFLFVBQUE7RUFDQSxXQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLG9CQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQkFBQTtFQUNBLHVCQUFBO0FDREY7O0FESUE7RUFDRSxrQ0FBQTtBQ0RGOztBRElBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtBQ0RGOztBREtBO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0FDRkYiLCJmaWxlIjoic3JjL2FwcC9EZW1vL2RlbW8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLmxhdW5jaGVyQmd7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg0NWRlZywgICMwMzJkNGMsICMzYTYwNzMpO1xyXG59XHJcblxyXG4uTG9nb0NvbnRhaW5lcntcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gXHJcbn1cclxuXHJcbi5saW5re1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgaGVpZ2h0OiAyMHB4O1xyXG4gIGZvbnQtc2l6ZTogMTJweDtcclxuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICBmb250LXdlaWdodDogbGlnaHRlcjtcclxuICBjb2xvcjogd2hpdGU7XHJcbn1cclxuXHJcbi5oZWFkZXJJbWd7XHJcbiAgaGVpZ2h0OiA5NSU7XHJcbn1cclxuXHJcbi5kb3R7XHJcbiAgd2lkdGg6IDF2aDtcclxuICBoZWlnaHQ6IDF2aDtcclxuICBtYXJnaW4tdG9wOiAxLjV2aDtcclxuICBtYXJnaW4tbGVmdDogMC41JTtcclxuICBib3JkZXItcmFkaXVzOiAxLjV2aDtcclxuICBtYXJnaW4tcmlnaHQ6IDAuNSU7XHJcbiAgYmFja2dyb3VuZDogIzY0ZmZkYjlmO1xyXG4gIGJvcmRlcjogMnB4IHNvbGlkIGJsYWNrO1xyXG59XHJcblxyXG4uZG90LmFjdHtcclxuICBiYWNrZ3JvdW5kOiByZ2JhKDEsIDE2LCAyMCwgMC43ODEpO1xyXG59XHJcblxyXG4uZG90c3tcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGhlaWdodDogNTBweDtcclxufVxyXG5cclxuXHJcbi5idXR0b25OeHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDE1cHg7XHJcbn0iLCIubGF1bmNoZXJCZyB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg0NWRlZywgIzAzMmQ0YywgIzNhNjA3Myk7XG59XG5cbi5Mb2dvQ29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5saW5rIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogMjBweDtcbiAgZm9udC1zaXplOiAxMnB4O1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgZm9udC13ZWlnaHQ6IGxpZ2h0ZXI7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmhlYWRlckltZyB7XG4gIGhlaWdodDogOTUlO1xufVxuXG4uZG90IHtcbiAgd2lkdGg6IDF2aDtcbiAgaGVpZ2h0OiAxdmg7XG4gIG1hcmdpbi10b3A6IDEuNXZoO1xuICBtYXJnaW4tbGVmdDogMC41JTtcbiAgYm9yZGVyLXJhZGl1czogMS41dmg7XG4gIG1hcmdpbi1yaWdodDogMC41JTtcbiAgYmFja2dyb3VuZDogIzY0ZmZkYjlmO1xuICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbn1cblxuLmRvdC5hY3Qge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDEsIDE2LCAyMCwgMC43ODEpO1xufVxuXG4uZG90cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDUwcHg7XG59XG5cbi5idXR0b25OeCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDE1cHg7XG59Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/Demo/demo.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/Demo/demo.component.ts ***!
+  \****************************************/
+/*! exports provided: DemoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DemoComponent", function() { return DemoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_screen_size_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/screen-size.service */ "./src/app/services/screen-size.service.ts");
+/* harmony import */ var _demoStyle_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./demoStyle.service */ "./src/app/Demo/demoStyle.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_loginDataFetche_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/loginDataFetche.service */ "./src/app/services/loginDataFetche.service.ts");
+/* harmony import */ var _services_DataFetcher_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/DataFetcher.service */ "./src/app/services/DataFetcher.service.ts");
+
+
+
+
+
+
+
+let DemoComponent = class DemoComponent {
+    constructor(screenState, styleSetter, router, loginDtaFetcher) {
+        this.screenState = screenState;
+        this.styleSetter = styleSetter;
+        this.router = router;
+        this.loginDtaFetcher = loginDtaFetcher;
+        this.errorShow = false;
+        this.errorShowConf = false;
+        this.current = 0;
+        this.demoImages = [
+            "demo.png",
+            "demo1.jpg",
+            "demo2.jpg",
+            "demo5.jpg",
+            "demo6.jpg",
+            "demo3.jpg",
+            "demo4.jpg"
+        ];
+    }
+    ngOnInit() {
+        this.screenState.screenSize.subscribe((scrSz) => {
+            this.onScreensizeChange(scrSz);
+        });
+        //  this.router.navigateByUrl("/music"); 
+    }
+    onScreensizeChange(scrSz) {
+        this.picStyle = this.styleSetter.picStyleSetter(scrSz);
+        this.bottomStyle = this.styleSetter.bottomStyler(scrSz);
+        this.fullLogoStyle = this.styleSetter.fullLogoStyler(scrSz);
+        this.loginStyle = this.styleSetter.loginStyleSetter(scrSz);
+        this.loaderStyle = this.styleSetter.loaderStyleSetter(scrSz);
+        this.errorStyle = this.styleSetter.errorStyleSetter(scrSz);
+    }
+    goToMusic() {
+        this.router.navigateByUrl("/music");
+    }
+    buttonClicked() {
+        if (this.current == this.demoImages.length - 1) {
+            this.goToMusic();
+        }
+        else {
+            this.current++;
+        }
+    }
+};
+DemoComponent.ctorParameters = () => [
+    { type: _services_screen_size_service__WEBPACK_IMPORTED_MODULE_2__["screenSizeState"] },
+    { type: _demoStyle_service__WEBPACK_IMPORTED_MODULE_3__["demoStyleService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _services_loginDataFetche_service__WEBPACK_IMPORTED_MODULE_5__["LoginDataFetcher"] }
+];
+DemoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-demo',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./demo.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Demo/demo.component.html")).default,
+        providers: [_demoStyle_service__WEBPACK_IMPORTED_MODULE_3__["demoStyleService"], _services_loginDataFetche_service__WEBPACK_IMPORTED_MODULE_5__["LoginDataFetcher"], _services_DataFetcher_service__WEBPACK_IMPORTED_MODULE_6__["DataFetcher"]],
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./demo.component.scss */ "./src/app/Demo/demo.component.scss")).default]
+    })
+], DemoComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Demo/demoStyle.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/Demo/demoStyle.service.ts ***!
+  \*******************************************/
+/*! exports provided: demoStyleService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "demoStyleService", function() { return demoStyleService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let demoStyleService = class demoStyleService {
+    constructor() {
+    }
+    loginStyleSetter(scrSz) {
+        let boxSize = 0.4 * Math.min(scrSz.width, scrSz.height);
+        return {
+            'width': boxSize * 2 + 'px',
+            'height': boxSize + 'px',
+            'position': 'absolute',
+            'top': (scrSz.height - boxSize) / 1.9 + 'px',
+            'left': (scrSz.width - boxSize * 2) / 2 + 'px',
+        };
+    }
+    errorStyleSetter(scrSz) {
+        let boxSize = 0.1 * Math.min(scrSz.width, scrSz.height);
+        return {
+            'width': '100%',
+            'height': boxSize + 'px',
+            'position': 'absolute',
+            'top': ((scrSz.height - boxSize) / 2 + boxSize + 50) + 'px',
+            'text-align': 'center',
+            'color': 'white'
+        };
+    }
+    loaderStyleSetter(scrSz) {
+        let boxSize = 0.4 * Math.min(scrSz.width, scrSz.height);
+        return {
+            'width': (boxSize * 2 - 2) + 'px',
+            'height': boxSize - 16 + 'px',
+            'margin-left': '1px'
+        };
+    }
+    picStyleSetter(scrSz) {
+        return {
+            'width': (scrSz.width - 20) + 'px',
+            'height': (scrSz.height - 100) + 'px',
+            'padding': '10px',
+        };
+    }
+    bottomStyler(scrSz) {
+        let boxSize = 0.6 * Math.min(scrSz.width, scrSz.height);
+        return {
+            'width': scrSz.width + 'px',
+            'height': '80px',
+        };
+    }
+    fullLogoStyler(scrSz) {
+        let boxSize = 0.6 * Math.min(scrSz.width, scrSz.height);
+        return {
+            'line-height': '1px',
+        };
+    }
+};
+demoStyleService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+], demoStyleService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -450,6 +652,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _music_player_music_player_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./music-player/music-player.component */ "./src/app/music-player/music-player.component.ts");
 /* harmony import */ var _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sign-up/sign-up.component */ "./src/app/sign-up/sign-up.component.ts");
 /* harmony import */ var _launcher_launcher_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./launcher/launcher.component */ "./src/app/launcher/launcher.component.ts");
+/* harmony import */ var _Demo_demo_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Demo/demo.component */ "./src/app/Demo/demo.component.ts");
+
 
 
 
@@ -458,6 +662,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'music', component: _music_player_music_player_component__WEBPACK_IMPORTED_MODULE_3__["MusicPlayerComponent"] },
+    { path: 'demo', component: _Demo_demo_component__WEBPACK_IMPORTED_MODULE_6__["DemoComponent"] },
     { path: 'login', component: _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_4__["SignUpComponent"] },
     { path: '', component: _launcher_launcher_component__WEBPACK_IMPORTED_MODULE_5__["LauncherComponent"] },
     { path: '', redirectTo: 'launch', pathMatch: 'full' },
@@ -634,6 +839,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_24__);
 /* harmony import */ var hammer_timejs__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! hammer-timejs */ "./node_modules/hammer-timejs/hammer-time.js");
 /* harmony import */ var hammer_timejs__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(hammer_timejs__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _Demo_demo_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Demo/demo.component */ "./src/app/Demo/demo.component.ts");
+
 
 
 
@@ -678,7 +885,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _queue_queue_component__WEBPACK_IMPORTED_MODULE_9__["DialogOverviewExampleDialog"],
             _header_header_component__WEBPACK_IMPORTED_MODULE_7__["LogoutConfirmDialog"],
             _queue_queue_component__WEBPACK_IMPORTED_MODULE_9__["ModifyAddDialog"],
-            _header_header_component__WEBPACK_IMPORTED_MODULE_7__["AppInfoDialog"]
+            _header_header_component__WEBPACK_IMPORTED_MODULE_7__["AppInfoDialog"],
+            _Demo_demo_component__WEBPACK_IMPORTED_MODULE_26__["DemoComponent"],
+            _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_12__["DemoConfirmDialog"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -708,7 +917,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _queue_queue_component__WEBPACK_IMPORTED_MODULE_9__["DialogOverviewExampleDialog"],
             _header_header_component__WEBPACK_IMPORTED_MODULE_7__["LogoutConfirmDialog"],
             _queue_queue_component__WEBPACK_IMPORTED_MODULE_9__["ModifyAddDialog"],
-            _header_header_component__WEBPACK_IMPORTED_MODULE_7__["AppInfoDialog"]
+            _header_header_component__WEBPACK_IMPORTED_MODULE_7__["AppInfoDialog"],
+            _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_12__["DemoConfirmDialog"]
         ]
     })
 ], AppModule);
@@ -3286,12 +3496,13 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************!*\
   !*** ./src/app/sign-up/sign-up.component.ts ***!
   \**********************************************/
-/*! exports provided: SignUpComponent */
+/*! exports provided: SignUpComponent, DemoConfirmDialog */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpComponent", function() { return SignUpComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DemoConfirmDialog", function() { return DemoConfirmDialog; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_screen_size_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/screen-size.service */ "./src/app/services/screen-size.service.ts");
@@ -3301,6 +3512,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_loginDataFetche_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/loginDataFetche.service */ "./src/app/services/loginDataFetche.service.ts");
 /* harmony import */ var _services_DataFetcher_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/DataFetcher.service */ "./src/app/services/DataFetcher.service.ts");
 /* harmony import */ var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/cdk/text-field */ "./node_modules/@angular/cdk/esm2015/text-field.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
@@ -3311,8 +3524,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let SignUpComponent = class SignUpComponent {
-    constructor(_autofill, dataFetcher, router, screenState, styleSetter) {
+    constructor(_autofill, dialog, dataFetcher, router, screenState, styleSetter) {
         this._autofill = _autofill;
+        this.dialog = dialog;
         this.dataFetcher = dataFetcher;
         this.router = router;
         this.screenState = screenState;
@@ -3376,6 +3590,7 @@ let SignUpComponent = class SignUpComponent {
         if (this.inputFocused) {
             return;
         }
+        this.scrSz = scrSz;
         this.loginContainer = {
             'width': (scrSz.width - 3) + 'px',
             'height': (scrSz.height - 3) + 'px',
@@ -3435,7 +3650,26 @@ let SignUpComponent = class SignUpComponent {
     openMusicGuest() {
         localStorage.setItem('loggedIn', 'false');
         localStorage.setItem('username', 'Guest');
-        this.router.navigateByUrl("/music");
+        this.navigateToDemoOrPlayer();
+    }
+    navigateToDemoOrPlayer() {
+        if (!this.scrSz.isMobile) {
+            this.router.navigateByUrl("/music");
+            return;
+        }
+        const dialogRef = this.dialog.open(DemoConfirmDialog, {
+            width: '300px',
+            data: "Demo"
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            //console.log('The dialog was closed');
+            if (result && result == 'demo') {
+                this.router.navigateByUrl("/demo");
+            }
+            else if (result && result == 'skip') {
+                this.router.navigateByUrl("/music");
+            }
+        });
     }
     onLoginUsernameChange(username) {
         if (username.length > 0 && (this.allUsername.indexOf(username) != -1 || this.allEmail.indexOf(username) != -1)) {
@@ -3468,7 +3702,7 @@ let SignUpComponent = class SignUpComponent {
                     console.log(user);
                     localStorage.setItem('username', JSON.stringify(user));
                     this.showLoginText = false;
-                    this.router.navigateByUrl("/music");
+                    this.navigateToDemoOrPlayer();
                 });
             }
             else if (data == 0) {
@@ -3524,6 +3758,7 @@ let SignUpComponent = class SignUpComponent {
 };
 SignUpComponent.ctorParameters = () => [
     { type: _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_8__["AutofillMonitor"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_9__["MatDialog"] },
     { type: _services_loginDataFetche_service__WEBPACK_IMPORTED_MODULE_6__["LoginDataFetcher"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
     { type: _services_screen_size_service__WEBPACK_IMPORTED_MODULE_2__["screenSizeState"] },
@@ -3537,6 +3772,29 @@ SignUpComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./sign-up.component.scss */ "./src/app/sign-up/sign-up.component.scss")).default]
     })
 ], SignUpComponent);
+
+let DemoConfirmDialog = class DemoConfirmDialog {
+    constructor(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    ngOnInit() {
+    }
+    onNoClick() {
+        this.dialogRef.close();
+    }
+};
+DemoConfirmDialog.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_9__["MatDialogRef"] },
+    { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_9__["MAT_DIALOG_DATA"],] }] }
+];
+DemoConfirmDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'demo-dialog',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./demo-dialog.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/sign-up/demo-dialog.html")).default,
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_9__["MAT_DIALOG_DATA"]))
+], DemoConfirmDialog);
 
 
 
